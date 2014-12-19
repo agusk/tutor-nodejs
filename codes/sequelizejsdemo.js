@@ -8,43 +8,6 @@ var sequelize = new Sequelize('mydatabase', 'nodejs', 'nodejs', {
     dialect: 'mysql'
 });
 
-////Create Item Table Structure
-//var Item = sequelize.define('Item', {
-//    id: Sequelize.STRING,
-//    name:Sequelize.STRING,
-//    description: Sequelize.STRING,
-//    qty: Sequelize.INTEGER
-//});
-//
-////Applying Item Table to database
-//sequelize.sync({force:true}).complete(function (err) {
-//    if(err){
-//        console.log('An error occur while creating table');
-//    }else{
-//        console.log('Item table created successfully');
-//
-//        var item1 = Item.build({
-//            id: 1,
-//            name:'Laptop',
-//            description: 'Acer 2340TL',
-//            qty: 23
-//        });
-////Inserting Data into database
-//        item1.save().complete(function (err) {
-//            if (err) {
-//                console.log('Error in Inserting Record');
-//                console.log(err);
-//            } else {
-//                console.log('Data successfully inserted');
-//            }
-//        });
-//
-//    }
-//});
-
-
-
-
 // define model <--> table
 var Student = sequelize.define('Student', {
     name: Sequelize.STRING,
